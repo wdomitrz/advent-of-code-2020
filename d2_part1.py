@@ -37,12 +37,13 @@ def validate(min_occurences, max_occurences, letter, password):
 
 
 def main():
-    with open("input.txt") as f:
+    with open("d2_input.txt") as f:
         data = f.readlines()
     data = map(proc_line, data)
     oks = map(lambda x: validate(**x), data)
     res = sum(oks)
     print(res)
+
 
 if __name__ == '__main__':
     import doctest

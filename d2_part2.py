@@ -31,7 +31,7 @@ def validate(positions, letter, passowrd):
 
 
 def main():
-    with open("input.txt") as f:
+    with open("d2_input.txt") as f:
         data = f.readlines()
     data = map(proc_line, data)
     oks = map(lambda x: validate(**x), data)
@@ -42,5 +42,5 @@ def main():
 if __name__ == '__main__':
     import doctest
     doctest.testmod()
-    
+
     main()
