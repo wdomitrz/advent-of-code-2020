@@ -7,11 +7,10 @@ def decode_number(s: str) -> int:
     >>> decode_number("BBFFBBFRLL")
     820
     """
-    s = s.replace("F", "0")
-    s = s.replace("B", "1")
-    s = s.replace("L", "0")
-    s = s.replace("R", "1")
-    return int(s, 2)
+    return int(
+        s.replace("F", "0").replace("B", "1")
+        .replace("L", "0").replace("R", "1"),
+        2)
 
 
 def main():
