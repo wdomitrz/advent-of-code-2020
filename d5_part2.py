@@ -7,10 +7,9 @@ def find_missing_id(seats):
     3
     """
     seats = list(seats)
-    min_id = min(seats)
     max_id = max(seats)
-    M = max_id - min_id + 1
-    return min_id + M * (M - 1) // 2 - sum(map(lambda x: x - min_id, seats))
+    # Sum of all ids - sum of existing ids = value of missing id
+    return (len(seats) + 1) * (2 * max_id - len(seats)) // 2 - sum(seats)
 
 
 def main():

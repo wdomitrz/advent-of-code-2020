@@ -14,15 +14,11 @@ def decode_number(s: str) -> int:
     return int(s, 2)
 
 
-def find_max_seat_id(data):
-    return max(map(decode_number, data))
-
-
 def main():
     with open("d5_input.txt") as f:
         data = f.read().split()
 
-    print(find_max_seat_id(data))
+    print(max(map(decode_number, data)))
 
 
 if __name__ == '__main__':
