@@ -70,9 +70,10 @@ def find_bad_jmp_or_nop_value(programme):
 
 
 def main():
-    with open("d08_input.txt") as f:
+    with open("inputs/d08.txt") as f:
         data = f.read().splitlines()
 
+    print(run_till_loop(list(map(parse_instruction, data)))[0])
     print(find_bad_jmp_or_nop_value(list(map(parse_instruction, data))))
 
 
