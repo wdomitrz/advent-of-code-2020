@@ -43,7 +43,7 @@ def find_first_not_ok(data, window_length=25):
 
 
 def main():
-    with open("d9_input.txt") as f:
+    with open("d09_input.txt") as f:
         data = list(map(int, f.readlines()))
 
     print(find_first_not_ok(data))

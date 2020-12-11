@@ -35,7 +35,7 @@ def count_trees(trees, initial_pos=None, slope=None):
 
 
 def main():
-    with open("d3_input.txt") as f:
+    with open("d03_input.txt") as f:
         data = f.read().splitlines()
 
     print(count_trees(data))

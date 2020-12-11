@@ -1,4 +1,4 @@
-from d4_part1 import parse_all, count_ok
+from d04_part1 import parse_all, count_ok
 
 
 def validate_n_digits(n: int = 4) -> bool:
@@ -115,7 +115,7 @@ validators = {
 
 def validate(passport):
     """
-    >>> from d4_part1 import parse
+    >>> from d04_part1 import parse
     >>> validate(parse("eyr:1972 cid:100\\nhcl:#18171d ecl:amb hgt:170 pid:186cm iyr:2018 byr:1926"))
     False
     >>> validate(parse("iyr:2019\\nhcl:#602927 eyr:1967 hgt:170cm\\necl:grn pid:012533040 byr:1946"))
@@ -140,7 +140,7 @@ def validate(passport):
 
 
 def main():
-    with open("d4_input.txt") as f:
+    with open("d04_input.txt") as f:
         data = f.read()
 
     print(count_ok(parse_all(data), validate_fn=validate))

@@ -73,7 +73,7 @@ def count_reachability(v_end, graph):
 
 
 def main():
-    with open("d7_input.txt") as f:
+    with open("d07_input.txt") as f:
         data = f.read().splitlines()
 
     bag_graph = dict(map(parse_line, data))

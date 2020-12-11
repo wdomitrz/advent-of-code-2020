@@ -51,7 +51,7 @@ def run_till_loop(programme):
 
 
 def main():
-    with open("d8_input.txt") as f:
+    with open("d08_input.txt") as f:
         data = f.read().splitlines()
 
     print(run_till_loop(list(map(parse_instruction, data))))

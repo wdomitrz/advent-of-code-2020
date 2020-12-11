@@ -25,7 +25,7 @@ def product_of_n_with_fixed_sum(data, n=3, S=2020):
 
 
 def main():
-    with open("d1_input.txt") as f:
+    with open("d01_input.txt") as f:
         data = f.readlines()
     data = map(int, data)
     print(product_of_n_with_fixed_sum(data, n=3))

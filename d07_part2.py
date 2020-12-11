@@ -1,6 +1,6 @@
 from math import prod
 
-from d7_part1 import dfs, parse_line
+from d07_part1 import dfs, parse_line
 
 
 def count_bags_in(bag, bag_graph):
@@ -15,7 +15,7 @@ def count_bags_in(bag, bag_graph):
 
 
 def main():
-    with open("d7_input.txt") as f:
+    with open("d07_input.txt") as f:
         data = f.read().splitlines()
 
     bag_graph = dict(map(parse_line, data))

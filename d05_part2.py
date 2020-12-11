@@ -1,4 +1,4 @@
-from d5_part1 import decode_number
+from d05_part1 import decode_number
 
 
 def find_missing_id(seats):
@@ -13,7 +13,7 @@ def find_missing_id(seats):
 
 
 def main():
-    with open("d5_input.txt") as f:
+    with open("d05_input.txt") as f:
         data = f.read().split()
 
     print(find_missing_id(map(decode_number, data)))

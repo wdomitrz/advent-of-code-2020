@@ -1,6 +1,6 @@
 from math import prod
 
-from d3_part1 import count_trees
+from d03_part1 import count_trees
 
 
 def count_all_trees(trees, slopes=None):
@@ -24,7 +24,7 @@ def count_all_trees(trees, slopes=None):
 
 
 def main():
-    with open("d3_input.txt") as f:
+    with open("d03_input.txt") as f:
         data = f.read().splitlines()
 
     print(prod(count_all_trees(data)))

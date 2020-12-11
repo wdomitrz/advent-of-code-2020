@@ -1,4 +1,4 @@
-from d9_part1 import find_first_not_ok
+from d09_part1 import find_first_not_ok
 
 
 def find_range_with_sum(s, data):
@@ -24,7 +24,7 @@ def find_range_with_sum(s, data):
 
 
 def main():
-    with open("d9_input.txt") as f:
+    with open("d09_input.txt") as f:
         data = list(map(int, f.readlines()))
 
     res_range = find_range_with_sum(find_first_not_ok(data), data)

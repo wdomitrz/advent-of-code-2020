@@ -23,7 +23,7 @@ def count_anyone_yes(group_data):
 
 
 def main():
-    with open("d6_input.txt") as f:
+    with open("d06_input.txt") as f:
         data = f.read().split("\n\n")
 
     print(sum(map(count_anyone_yes, data)))

@@ -14,7 +14,7 @@ def decode_number(s: str) -> int:
 
 
 def main():
-    with open("d5_input.txt") as f:
+    with open("d05_input.txt") as f:
         data = f.read().split()
 
     print(max(map(decode_number, data)))

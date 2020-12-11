@@ -48,7 +48,7 @@ def count_ok(passports, validate_fn=validate):
 
 
 def main():
-    with open("d4_input.txt") as f:
+    with open("d04_input.txt") as f:
         data = f.read()
 
     print(count_ok(parse_all(data)))
