@@ -42,11 +42,11 @@ def get_location2(instructions):
             waypoint += val * movements[instr]
         elif instr in ['R', 'L']:
             angle = val if instr == 'R' else -val
-            waypoint = np.array([[int(round(np.cos(np.pi * angle / 180))),
+            rotation = np.array([[int(round(np.cos(np.pi * angle / 180))),
                                   int(round(np.sin(np.pi * angle / 180)))],
                                  [-int(round(np.sin(np.pi * angle / 180))),
-                                  int(round(np.cos(np.pi * angle / 180)))]]) @\
-                waypoint
+                                  int(round(np.cos(np.pi * angle / 180)))]])
+            waypoint = rotation @ waypoint
         elif instr == 'F':
             pos += val * waypoint
 

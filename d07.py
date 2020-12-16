@@ -71,8 +71,8 @@ def count_reachability(v_end, graph):
     4
     """  # pylint: disable=line-too-long
     vis = vertice_reachability(v_end, graph)
-    return sum(map(lambda x: x > 0, vis.values())) - \
-        1  # We cannot reach vertice from itself
+    # We cannot reach vertice from itself (so we have -1)
+    return sum(map(lambda x: x > 0, vis.values())) - 1
 
 
 def count_bags_in(bag, bag_graph):
@@ -82,8 +82,8 @@ def count_bags_in(bag, bag_graph):
     >>> count_bags_in(("shiny", "gold"), bag_graph)
     126
     """  # pylint: disable=line-too-long
-    return dfs(bag, {}, bag_graph, lambda xs: 1 + sum(map(prod, xs))) - \
-        1  # We don't count the outer bag.
+    # We don't count the outer bag (so we have -1)
+    return dfs(bag, {}, bag_graph, lambda xs: 1 + sum(map(prod, xs))) - 1
 
 
 def main():
