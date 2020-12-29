@@ -17,8 +17,8 @@ class Simulator:
 
     def step(self):
         counted = convolve(self.arr, self.rules, mode='same')
-        self.arr = (3 - 0.5 <= counted) * (counted <= 3.5) + \
-            (((4 - 0.5 <= counted) * (counted <= 4 + 0.5) * (self.arr == 1)) >= 1)
+        self.arr = (counted >= 2.5) & (counted <= 3.5) | \
+            (counted >= 2.5) & (counted <= 4.5) & (self.arr == 1)
 
     def size_steps(self):
         for _ in range(self.size):
